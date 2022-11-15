@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Delivery App</string>
+    <string name="app_name">Sun Digital India Delivery Boy</string>
 
     <string name="vegi_caption">VEGI CAPTION</string>
     <string name="log_in_to_continue">Log in to continue</string>
@@ -21,8 +21,10 @@
     <string name="no">No</string>
     <string name="yes">Yes</string>
     <string name="completed_deliveries">Completed Deliveries</string>
+    <color name="orange">#FC3901</color>
+    <string name="no_item_found">No Orders Found</string>
 
-    <string name="here_are_your_deliveries">here are your deliveries</string>
+    <string name="here_are_your_deliveries">here are your Order List</string>
     <string name="no_data_found">No Data Found</string>
     <string name="edit">Edit</string>
     <string name="total_deliveries">Total Deliveries</string>
@@ -52,4 +54,5 @@
     <string name="km"> Km</string>
     <string name="quentity">Quantity </string>
     <string name="profileupdatesuccessfully">Profile Updated Successfully</string>
+    <string name="lbl_verify_now">Verify now</string>
 </resources>

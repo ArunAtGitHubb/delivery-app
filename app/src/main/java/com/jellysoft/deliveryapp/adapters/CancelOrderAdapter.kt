@@ -11,10 +11,10 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.jellysoft.deliveryapp.ItemOrder
 import com.jellysoft.deliveryapp.OrderDetailActivity
 import com.jellysoft.deliveryapp.R.layout
-import com.jellysoft.deliveryapp.adapters.PendingOrderAdapter.OrderViewHolder
-import com.jellysoft.deliveryapp.databinding.ItemOrderlistBinding
+import com.jellysoft.deliveryapp.adapters.CancelOrderAdapter.OrderViewHolder
+import com.jellysoft.deliveryapp.databinding.ItemCancelOrderlistBinding
 
-class PendingOrderAdapter(data: ArrayList<ItemOrder>, username: String, from: String) :
+class CancelOrderAdapter(data: ArrayList<ItemOrder>, username: String, from: String) :
     Adapter<OrderViewHolder>() {
     private val data: List<ItemOrder>
     private val username: String
@@ -27,7 +27,7 @@ class PendingOrderAdapter(data: ArrayList<ItemOrder>, username: String, from: St
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrderViewHolder {
         context = parent.context
-        val view = LayoutInflater.from(parent.context).inflate(layout.item_orderlist, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(layout.item_cancel_orderlist, parent, false)
         return OrderViewHolder(view)
     }
 
@@ -40,10 +40,10 @@ class PendingOrderAdapter(data: ArrayList<ItemOrder>, username: String, from: St
     }
 
     inner class OrderViewHolder(itemView: View) : ViewHolder(itemView) {
-        var binding: ItemOrderlistBinding
+        var binding: ItemCancelOrderlistBinding
 
         init {
-            binding = ItemOrderlistBinding.bind(itemView)
+            binding = ItemCancelOrderlistBinding.bind(itemView)
         }
 
         @SuppressLint("SetTextI18n")
@@ -61,7 +61,7 @@ class PendingOrderAdapter(data: ArrayList<ItemOrder>, username: String, from: St
                 val intent = Intent(context, OrderDetailActivity::class.java)
                 intent.putExtra("username", username)
                 intent.putExtra("orderId", datum.orderId)
-                intent.putExtra("from", "pending")
+                intent.putExtra("from", "cancel")
                 context!!.startActivity(intent)
             }
         }

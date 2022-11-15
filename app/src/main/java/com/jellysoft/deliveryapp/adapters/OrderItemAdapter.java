@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.jellysoft.deliveryapp.ItemOrder;
 import com.jellysoft.deliveryapp.R;
 import com.jellysoft.deliveryapp.databinding.ItemProductsBinding;
@@ -36,7 +37,7 @@ public class OrderItemAdapter extends RecyclerView.Adapter<OrderItemAdapter.Item
 
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
-        holder.setmodel(itemDetails.get(position));
+        holder.setModel(itemDetails.get(position));
     }
 
     @Override
@@ -53,16 +54,15 @@ public class OrderItemAdapter extends RecyclerView.Adapter<OrderItemAdapter.Item
         }
 
         @SuppressLint("SetTextI18n")
-        public void setmodel(ItemOrder itemDetail) {
+        public void setModel(ItemOrder itemDetail) {
             binding.productName.setText(itemDetail.getProductName());
-            binding.produxtWeight.setText(df.format(Float.parseFloat(itemDetail.getPriceUnit())).concat(" ") + itemDetail.getPriceUnitName());
-            binding.tvproductprice.setText("Rs. " + df.format(Float.parseFloat(itemDetail.getPrice())));
+            binding.tvproductprice.setText("Rs. " + itemDetail.getPrice() + "/-");
             binding.produxtQuentity.setText(context.getString(R.string.quentity).concat(" : ") + itemDetail.getQuantity());
-//            Glide.with(binding.getRoot().getContext())
-//                    .load(Const.BASE_IMG_URL + itemDetail.getImage())
-//                    .placeholder(R.drawable.placeholder)
-//                    .error(R.drawable.placeholder)
-//                    .into(binding.imgProduct);
+            Glide.with(binding.getRoot().getContext())
+                    .load(itemDetail.getImage())
+                    .placeholder(R.drawable.placeholder)
+                    .error(R.drawable.placeholder)
+                    .into(binding.imgProduct);
         }
     }
 }

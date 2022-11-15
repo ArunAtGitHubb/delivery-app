@@ -49,19 +49,6 @@
                         android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/produxtWeight"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/productName"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_toEndOf="@+id/imgProduct"
-                        android:layout_toRightOf="@+id/imgProduct"
-                        android:fontFamily="@font/gilroymedium"
-                        android:text="1.50 kg"
-                        android:textSize="12sp" />
-
-                    <TextView
                         android:id="@+id/produxtQuentity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

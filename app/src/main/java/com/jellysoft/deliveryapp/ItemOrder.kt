@@ -10,6 +10,7 @@ class ItemOrder {
     var addressId = 0
     var createdAt: String? = null
     var orderAddress: Orderaddress? = null
+    var address: String? = null
     var paymentType = 0
     var orderProducts: List<OrderproductsItem>? = null
     var shippingCharge: String? = null
@@ -27,7 +28,7 @@ class ItemOrder {
     
     var priceUnit: String? = null
     var image: String? = null
-    var quantity = 0
+    var quantity: String? = "0"
     var totalPrice: String? = null
     var priceUnitName: String? = null
     var price: String? = null
@@ -46,4 +47,21 @@ class ItemOrder {
     var altNumber: String? = null
     var landmark: String? = null
     var longitude: String? = null
+
+    var orderDate:String? = null
+    var cityName:String? = null
+    var restaurantName:String? = null
+    var restaurantPhone:String? = null
+    var restaurantAddress:String? = null
+
+    var foodName:String? = null
+    var foodPrice:String? = null
+    var subTotal:String? = null
+
+    var customerName:String? = null
+    var customerPhoneNumber:String? = null
+    var customerAddress:String? = null
+
+    var totalQty:String? = null
+    var grandTotal:String? = null
 }
