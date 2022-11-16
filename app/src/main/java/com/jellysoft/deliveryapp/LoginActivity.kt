@@ -1,5 +1,6 @@
 package com.jellysoft.deliveryapp
 
+import android.content.ContentValues
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
@@ -13,6 +14,7 @@ import com.jellysoft.deliveryapp.databinding.ActivityLoginBinding
 import com.jellysoft.deliveryapp.db.DeliveryDbHelper
 import com.jellysoft.deliveryapp.util.API
 import com.jellysoft.deliveryapp.util.Constant
+import com.jellysoft.deliveryapp.util.DeliveryReaderContract.DeliveryEntry.TABLE_DELIVERY
 import com.jellysoft.deliveryapp.util.DeliveryReaderContract.SQL_CREATE_TABLE_DELIVERY
 import com.jellysoft.deliveryapp.util.DeliveryReaderContract.SQL_DELETE_TABLE_DELIVERY
 import com.loopj.android.http.AsyncHttpClient
@@ -61,6 +63,11 @@ class LoginActivity : AppCompatActivity() {
                     val msgJson = mainJson.getJSONArray(Constant.ARRAY_NAME).getJSONObject(0)
                     Toast.makeText(applicationContext, msgJson.getString("msg"), Toast.LENGTH_SHORT).show()
                     if (msgJson.getString("success") == "1"){
+                        val dbHelper = DeliveryDbHelper(applicationContext)
+                        val db = dbHelper.writableDatabase
+                        val values = ContentValues()
+                        values.put("user_name", username)
+                        db.insert(TABLE_DELIVERY, null, values)
                         finish()
                         startActivity(Intent(applicationContext, MainActivity::class.java).putExtra("username", username))
                     }

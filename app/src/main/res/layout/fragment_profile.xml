@@ -14,6 +14,7 @@
         tools:context=".fragments.ProfileFragment">
 
         <LinearLayout
+            android:id="@+id/infoLinear"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -30,8 +31,8 @@
                     android:layout_height="100dp"
                     android:background="@drawable/bg_yellowring"
                     android:padding="4dp"
-                    app:civ_border_width="4dp"
-                    android:src="@drawable/user_place_holder" />
+                    android:src="@drawable/user_place_holder"
+                    app:civ_border_width="4dp" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -82,6 +83,123 @@
 
                     <TextView
                         android:id="@+id/deliveryCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginRight="18dp"
+                        android:fontFamily="@font/gilroybold"
+                        android:letterSpacing=".04"
+                        android:textColor="@color/color_black"
+                        android:textSize="18sp"
+                        tools:text="59" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="18dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="5dp"
+                        android:src="@drawable/invoices" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/gilroymedium"
+                        android:text="This Month Total Deliveries"
+                        android:textColor="@color/color_black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/thisMonthTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginRight="18dp"
+                        android:fontFamily="@font/gilroybold"
+                        android:letterSpacing=".04"
+                        android:textColor="@color/color_black"
+                        android:textSize="18sp"
+                        tools:text="59" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="18dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="5dp"
+                        android:src="@drawable/invoices" />
+
+                    <TextView
+                        android:layout_width="201dp"
+                        android:layout_height="52dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/gilroymedium"
+                        android:text="This Month Completed Deliveries"
+                        android:textColor="@color/color_black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/thisMonthCompleted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginRight="18dp"
+                        android:fontFamily="@font/gilroybold"
+                        android:letterSpacing=".04"
+                        android:textColor="@color/color_black"
+                        android:textSize="18sp"
+                        tools:text="59" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="18dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="5dp"
+                        android:src="@drawable/invoices" />
+
+                    <TextView
+                        android:layout_width="203dp"
+                        android:layout_height="38dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/gilroymedium"
+                        android:text="This Month Modified Deliveries"
+                        android:textColor="@color/color_black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/thisMonthMod"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -158,7 +276,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:indeterminateTint="@color/color_green"
+            android:indeterminateDrawable="@drawable/progress_bg"
             android:visibility="gone" />
 
     </RelativeLayout>

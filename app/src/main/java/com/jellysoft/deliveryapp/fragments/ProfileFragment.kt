@@ -17,13 +17,17 @@ import com.google.gson.JsonObject
 import com.jellysoft.deliveryapp.LoginActivity
 import com.jellysoft.deliveryapp.MainActivity
 import com.jellysoft.deliveryapp.MainActivity.GLOBAL
+import com.jellysoft.deliveryapp.MainActivity.GLOBAL.binding
 import com.jellysoft.deliveryapp.MainActivity.GLOBAL.username
 import com.jellysoft.deliveryapp.R
 import com.jellysoft.deliveryapp.R.layout
 import com.jellysoft.deliveryapp.databinding.FragmentProfileBinding
+import com.jellysoft.deliveryapp.db.DeliveryDbHelper
 import com.jellysoft.deliveryapp.util.API
 import com.jellysoft.deliveryapp.util.Constant
 import com.jellysoft.deliveryapp.util.Constant.API_URL
+import com.jellysoft.deliveryapp.util.DeliveryReaderContract.DeliveryEntry.COLUMN_NAME_USER_NAME
+import com.jellysoft.deliveryapp.util.DeliveryReaderContract.DeliveryEntry.TABLE_DELIVERY
 import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.AsyncHttpResponseHandler
 import com.loopj.android.http.RequestParams
@@ -68,6 +72,18 @@ class ProfileFragment : Fragment() {
         params.put("data", API.toBase64(jsObj.toString()))
         client.post(API_URL, params, object: AsyncHttpResponseHandler() {
 
+            override fun onStart() {
+                super.onStart()
+                binding.infoLinear.visibility = View.GONE
+                binding.pd.visibility = View.VISIBLE
+            }
+
+            override fun onFinish() {
+                super.onFinish()
+                binding.infoLinear.visibility = View.VISIBLE
+                binding.pd.visibility = View.GONE
+            }
+
             override fun onSuccess(statusCode: Int, headers: Array<out Header>?, responseBody: ByteArray?) {
                 val result = responseBody?.let { String(it) }
 
@@ -80,6 +96,9 @@ class ProfileFragment : Fragment() {
                     binding.username.text = user?.getString("category_name")
                     binding.deliveryCount.text = user?.getString("total_deliveries")
                     binding.mobile.text = user?.getString("phone_number")
+                    binding.thisMonthTotal.text = user?.getString("this_month_total")
+                    binding.thisMonthCompleted.text = user?.getString("this_month_completed")
+                    binding.thisMonthMod.text = user?.getString("this_month_modified")
 
                     Glide.with(binding.root.context)
                         .load(user?.getString("category_image"))
@@ -98,6 +117,9 @@ class ProfileFragment : Fragment() {
 
     fun logoutUser() {
         MainActivity().finish()
+        val dbHelper = context?.let { DeliveryDbHelper(it.applicationContext) }
+        val db = dbHelper?.writableDatabase
+        db?.delete(TABLE_DELIVERY, "$COLUMN_NAME_USER_NAME = ?", arrayOf(username))
         startActivity(Intent(context, LoginActivity::class.java))
     }
 }
