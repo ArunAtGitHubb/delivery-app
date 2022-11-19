@@ -170,29 +170,29 @@
 
                                 <RelativeLayout
                                     android:layout_width="370dp"
-                                    android:layout_height="268dp"
+                                    android:layout_height="340dp"
                                     android:layout_marginHorizontal="10dp"
                                     android:orientation="horizontal">
 
                                     <ImageView
                                         android:id="@+id/imgUser"
-                                        android:layout_width="84dp"
-                                        android:layout_height="78dp"
+                                        android:layout_width="83dp"
+                                        android:layout_height="87dp"
                                         android:layout_alignParentTop="true"
                                         android:layout_alignParentBottom="true"
-                                        android:layout_marginTop="86dp"
-                                        android:layout_marginBottom="103dp"
+                                        android:layout_marginTop="130dp"
+                                        android:layout_marginBottom="122dp"
                                         android:background="@drawable/bg_yellowring"
                                         android:padding="3dp" />
 
-                                    <LinearLayout
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="115dp"
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="260dp"
+                                        android:layout_height="154dp"
                                         android:layout_alignParentBottom="true"
                                         android:layout_gravity="center"
-                                        android:layout_marginStart="21dp"
-                                        android:layout_marginLeft="21dp"
-                                        android:layout_marginBottom="142dp"
+                                        android:layout_marginStart="18dp"
+                                        android:layout_marginLeft="18dp"
+                                        android:layout_marginBottom="168dp"
                                         android:layout_toEndOf="@+id/imgUser"
                                         android:layout_toRightOf="@+id/imgUser"
                                         android:orientation="vertical">
@@ -204,6 +204,14 @@
                                             android:fontFamily="@font/gilroybold"
                                             android:textColor="@color/color_black"
                                             android:textSize="20sp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.116"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintVertical_bias="0.046"
+                                            tools:layout_conversion_absoluteHeight="25dp"
+                                            tools:layout_conversion_absoluteWidth="106dp"
                                             tools:text="joseph Duo" />
 
                                         <TextView
@@ -213,44 +221,59 @@
                                             android:fontFamily="@font/gilroymedium"
                                             android:textColor="@color/color_black"
                                             android:textSize="16sp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.0"
+                                            app:layout_constraintStart_toStartOf="@+id/cusName"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintVertical_bias="0.305"
+                                            tools:layout_conversion_absoluteHeight="20dp"
+                                            tools:layout_conversion_absoluteWidth="170dp"
                                             tools:text="Mota varachha, SURAT" />
 
                                         <TextView
                                             android:id="@+id/cusaddress2"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:layout_below="@id/tvaddress1"
                                             android:fontFamily="@font/gilroymedium"
                                             android:textSize="14sp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.0"
+                                            app:layout_constraintStart_toStartOf="@+id/cusaddress1"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            tools:layout_conversion_absoluteHeight="32dp"
+                                            tools:layout_conversion_absoluteWidth="119dp"
                                             tools:text="302, Green Plazza \nGolden Chowk" />
 
-                                        <LinearLayout
+                                        <Button
+                                            android:id="@+id/cusCallBtn"
                                             android:layout_width="wrap_content"
-                                            android:layout_height="35dp"
-                                            android:layout_marginTop="3dp"
-                                            android:gravity="center"
-                                            android:orientation="horizontal">
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/bg_gredent_10dp"
+                                            android:padding="10dp"
+                                            android:text="  Make Call"
+                                            android:textColor="@color/color_pistalight"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.502"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintVertical_bias="0.938"
+                                            tools:layout_conversion_absoluteHeight="40dp"
+                                            tools:layout_conversion_absoluteWidth="170dp"></Button>
 
-                                            <Button
-                                                android:id="@+id/cusCallBtn"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:background="@drawable/bg_gredent_10dp"
-                                                android:text="Call"
-                                                android:textColor="@color/color_pistalight"></Button>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                                        </LinearLayout>
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="114dp"
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="260dp"
+                                        android:layout_height="155dp"
                                         android:layout_alignParentBottom="true"
                                         android:layout_gravity="center"
-                                        android:layout_marginStart="22dp"
-                                        android:layout_marginLeft="22dp"
+                                        android:layout_marginStart="18dp"
+                                        android:layout_marginLeft="18dp"
                                         android:layout_marginEnd="-102dp"
-                                        android:layout_marginBottom="15dp"
+                                        android:layout_marginBottom="8dp"
                                         android:layout_toEndOf="@+id/imgUser"
                                         android:layout_toRightOf="@+id/imgUser"
                                         android:orientation="vertical">
@@ -262,6 +285,14 @@
                                             android:fontFamily="@font/gilroybold"
                                             android:textColor="@color/color_black"
                                             android:textSize="20sp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.103"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintVertical_bias="0.028"
+                                            tools:layout_conversion_absoluteHeight="25dp"
+                                            tools:layout_conversion_absoluteWidth="106dp"
                                             tools:text="joseph Duo" />
 
                                         <TextView
@@ -271,34 +302,50 @@
                                             android:fontFamily="@font/gilroymedium"
                                             android:textColor="@color/color_black"
                                             android:textSize="16sp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.0"
+                                            app:layout_constraintStart_toStartOf="@+id/resName"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintVertical_bias="0.281"
+                                            tools:layout_conversion_absoluteHeight="20dp"
+                                            tools:layout_conversion_absoluteWidth="170dp"
                                             tools:text="Mota varachha, SURAT" />
 
                                         <TextView
                                             android:id="@+id/resaddress2"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:layout_below="@id/tvaddress1"
                                             android:fontFamily="@font/gilroymedium"
                                             android:textSize="14sp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.0"
+                                            app:layout_constraintStart_toStartOf="@+id/resaddress1"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintVertical_bias="0.471"
+                                            tools:layout_conversion_absoluteHeight="32dp"
+                                            tools:layout_conversion_absoluteWidth="119dp"
                                             tools:text="302, Green Plazza \nGolden Chowk" />
 
-                                        <LinearLayout
+                                        <Button
+                                            android:id="@+id/resCallBtn"
                                             android:layout_width="wrap_content"
-                                            android:layout_height="35dp"
-                                            android:layout_marginTop="3dp"
-                                            android:gravity="center"
-                                            android:orientation="horizontal">
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/bg_gredent_10dp"
+                                            android:padding="10dp"
+                                            android:text="  Make Call"
+                                            android:textColor="@color/color_pistalight"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.502"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintVertical_bias="0.939"
+                                            tools:layout_conversion_absoluteHeight="40dp"
+                                            tools:layout_conversion_absoluteWidth="170dp" />
 
-                                            <Button
-                                                android:id="@+id/resCallBtn"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="match_parent"
-                                                android:background="@drawable/bg_gredent_10dp"
-                                                android:text="Call"
-                                                android:textColor="@color/color_pistalight" />
-
-                                        </LinearLayout>
-                                    </LinearLayout>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                                 </RelativeLayout>
 
@@ -306,7 +353,7 @@
                                     android:id="@+id/progressBar"
                                     style="?android:attr/progressBarStyle"
                                     android:layout_width="401dp"
-                                    android:layout_height="100dp"
+                                    android:layout_height="63dp"
                                     android:layout_marginStart="0dp"
                                     android:layout_marginBottom="547dp" />
 

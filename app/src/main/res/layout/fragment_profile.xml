@@ -77,7 +77,7 @@
                         android:layout_marginStart="40dp"
                         android:layout_marginLeft="40dp"
                         android:fontFamily="@font/gilroymedium"
-                        android:text="@string/total_deliveries"
+                        android:text="Total Orders"
                         android:textColor="@color/color_black"
                         android:textSize="18sp" />
 
@@ -116,7 +116,7 @@
                         android:layout_marginStart="40dp"
                         android:layout_marginLeft="40dp"
                         android:fontFamily="@font/gilroymedium"
-                        android:text="This Month Total Deliveries"
+                        android:text="This Month Total Orders"
                         android:textColor="@color/color_black"
                         android:textSize="18sp" />
 
@@ -155,7 +155,7 @@
                         android:layout_marginStart="40dp"
                         android:layout_marginLeft="40dp"
                         android:fontFamily="@font/gilroymedium"
-                        android:text="This Month Completed Deliveries"
+                        android:text="This Month Completed Orders"
                         android:textColor="@color/color_black"
                         android:textSize="18sp" />
 
@@ -194,7 +194,7 @@
                         android:layout_marginStart="40dp"
                         android:layout_marginLeft="40dp"
                         android:fontFamily="@font/gilroymedium"
-                        android:text="This Month Modified Deliveries"
+                        android:text="This Month Modified Orders"
                         android:textColor="@color/color_black"
                         android:textSize="18sp" />
 

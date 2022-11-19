@@ -1,7 +1,6 @@
 package com.jellysoft.deliveryapp.fragments
 
 import android.content.Intent
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -11,13 +10,11 @@ import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
-import com.bumptech.glide.request.target.Target
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 import com.jellysoft.deliveryapp.LoginActivity
 import com.jellysoft.deliveryapp.MainActivity
 import com.jellysoft.deliveryapp.MainActivity.GLOBAL
-import com.jellysoft.deliveryapp.MainActivity.GLOBAL.binding
 import com.jellysoft.deliveryapp.MainActivity.GLOBAL.username
 import com.jellysoft.deliveryapp.R
 import com.jellysoft.deliveryapp.R.layout
